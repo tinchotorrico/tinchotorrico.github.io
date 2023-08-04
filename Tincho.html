@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tincho</title>
+    <link rel="stylesheet" href="common-styles.css">
+    <link rel="stylesheet" href="css/menudesplegable.css">
+    <link rel="stylesheet" href="redes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        body {
+            background-image: linear-gradient(to bottom right, #031625, #590f72);
+            height: 300vh;
+            margin: 0; /* Asegura que no haya espacios de margen en el cuerpo de la página */
+            padding: 0; /* Asegura que no haya espacios de relleno en el cuerpo de la página */
+        }
+
+        p {
+            /* Tus estilos actuales para el párrafo */
+            line-height: 1.5;
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-bottom: 1px;
+            margin-right: 1;
+            padding: 10px;
+        }
+
+        .menuTincho {
+            position: absolute;
+            width: calc(85%);
+            height: calc(860px);
+            background-color: rgb(2, 2, 2);
+            opacity: 0.8;
+            border: 2px solid black;
+            margin-top: calc(10%);
+            margin-left: 7.5%;
+            border-radius: calc(3%);
+        }
+
+        .ComponentesPC {
+            font-size: calc(2vw);
+            position: absolute;
+            margin-left:calc(1%);
+            text-align: center;
+            color: rgb(255, 193, 193);
+            border-color:10px black;
+            text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .menuTincho2 {
+            position: absolute;
+            width: 260px;
+            height: 350px;
+            background-color: rgb(2, 2, 2);
+            opacity: 0.8;
+            border: 2px solid black;
+            margin-top: 200px;
+            margin-left: 120px;
+            border-radius: calc(3%);
+        }
+
+        .IconosPC {
+            width: 240px; /* Ancho deseado */
+            height: 240px; /* Altura deseada */
+            position: absolute;
+            border-radius: 15px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        .TextoComponente {
+            font-size: calc(1.6vw);
+            position: absolute;
+            margin-left:calc(-1%);
+            margin-top: 260px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            border-top: 100px#000000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="redes">
+            <a href="https://discord.gg/V4ZBWY5N"><i id="discord" class="fa-brands fa-discord fa-fade"></i></a>
+            <a href="https://www.instagram.com/tinchotorrico/"><i id="instagram" class="fa-brands fa-instagram fa-fade"></i></a>
+            <a href="https://www.twitch.tv/tinchotorrico"><i id="twich" class="fa-brands fa-twitch fa-fade"></i></a>
+            <a href="https://www.youtube.com/channel/UChHXsD4BVqbGpW8EbKf603g"><i id="youtube" class="fa-brands fa-youtube fa-fade"></i></a>
+            <a href="https://www.tiktok.com/@tinchotorricook"><i id="tiktok" class="fa-brands fa-tiktok fa-fade"></i></a>
+        </div>
+
+        <div class="header-texts">
+            <a href="index.html" class="header-text">HOME</a>
+            <a href="juegos.html" class="header-text">JUEGOS</a>
+            <div class="dropdown">
+                <a href="comunidad.html" class="header-text">COMUNIDAD</a>
+                <div class="submenu">
+                    <a href="Cromos.html">Cromos</a>
+                    <a href="Ruleta.html">Ruleta</a>
+                    <a href="Salon_de_la_fama.html">Salon de la Fama</a>
+                </div>
+            </div>
+            <div class="dropdowns">
+                <a href="Tincho.html" class="header-text" id="header-text">TINCHO</a>
+                <div class="submenus">
+                    <a href="Estadisticas_de_Transmisiones.html">Estadisticas de Transmisiones</a>
+                    <a href="Novedades.html">Novedades</a>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+        <div class="background1">
+            <div class="menuTincho"> 
+                <div class="ComponentesPC">
+                    <p>COMPONENTES PC</p>
+                </div>
+            </div>
+            <div class="menuTincho2">
+                <div class="IconosPC">
+                    <img src="componentes\procesador.webp" alt="IconosPC" class="IconosPC">
+                    <div class="TextoComponente">
+                        <p>AMD Ryzen 5 3600g 6 Cores, a 3.59GHz</p>    
+                    </div>
+                </div>
+            </div>
+            <div class="menuTincho2" style="top: 0px; left: 350px;">
+                <div class="IconosPC">
+                    <img src="componentes\placa_madre.webp" alt="IconosPC" class="IconosPC">
+                    <div class="TextoComponente">
+                        <p>Motherboard Gigabyte GA-A320M-H</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menuTincho2" style="top: 0px; left: 700px;">
+                <div class="IconosPC">
+                    <img src="componentes\ram.jpg" alt="IconosPC" class="IconosPC">
+                    <div class="TextoComponente">
+                        <p>Memoria RAM DDR4 16GB 2666MHZ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menuTincho2" style="top: 400px; left: 0;">
+                <div class="IconosPC">
+                    <img src="componentes\ssd.jpg" alt="IconosPC" class="IconosPC">
+                    <div class="TextoComponente">
+                        <p>SSD 500GB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menuTincho2" style="top: 400px; left: 350px;">
+                <div class="IconosPC">
+                    <img src="componentes\tarjetagrafica.webp" alt="IconosPC" class="IconosPC">
+                    <div class="TextoComponente">
+                        <p>MEMORIA RAM DDR4 16GB 2666MHZ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menuTincho" style="margin-top: 400px; opacity: 0.9; background-color: rgb(20, 20, 20);">
+            <div class="ComponentesPC">
+                <p>PERIFERICOS</p>
+            </div>
+            <div class="menuTincho2" style="top: -130px; left: -110px;">
+                <div class="IconosPC">
+                    <img src="componentes\headset.jpg" alt="IconosPC" class="IconosPC">
+                    <div class="TextoComponente">
+                        <p>Auricular Gamer Gadnic A-37 Pro Microfono</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menuTincho2" style="top: -130px; left: 240px;">
+                <div class="IconosPC">
+                    <img src="componentes\mouse.jpg" alt="IconosPC" class="IconosPC">
+                    <div class="TextoComponente">
+                        <p>Mouse Gamer Noga St202</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+     
+    <div class="contenido">
+        <!-- Aquí puedes agregar el contenido del resto de tu página -->
+        <!-- Por ejemplo, puedes añadir más elementos, secciones, etc. -->
+    </div>
+    
+    <!-- Aquí puedes agregar el contenido del resto de tu página -->
+    <!-- Por ejemplo, puedes añadir más elementos, secciones, etc. -->
+
+    <script src="menudesplegable.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.estadisticas {
+    background-color: #18181b;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.dato {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.etiqueta {
+    font-weight: bold;
+}
+
+.valor {
+    color: #66ff99;
+}

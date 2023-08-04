@@ -1,0 +1,71 @@
+        /* Estilos para el recuadro */
+        .recuadro {
+            width: calc(100% - 800px);
+            background-color: #d4c2c2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 150px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Estilos para la línea superior del recuadro */
+        .recuadro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: #000000;
+            z-index: -1;
+        }
+
+
+        /* Estilos para el párrafo */
+        p {
+            line-height: 1.5;
+            position: relative;
+        }
+
+        /* Estilos para el título */
+        .titulo-recuadro {
+            font-size: 16px;
+            color: white;
+            margin-top: -50px; /* Ajustamos el margen superior para centrar el título */
+            margin-left: 5px;
+            margin-bottom: 1px;
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            position: absolute;
+            top: 0; /* Alineamos el título en la parte superior del recuadro del texto */
+            left: calc(50%); /* Centramos el título en la línea divisoria */
+            transform: translateX(-50%);
+            background-color: #000000;
+            box-shadow: 10 0 200px rgb(209, 128, 52);
+        }
+
+        .link-descarga {
+            width: 200px; /* Ancho deseado */
+            height: 40px; /* Altura deseada */
+            position: absolute;
+            margin-left: 165px;
+            margin-top: -2px;
+            z-index: 2;
+            box-shadow: 0 0 1000px rgb(137, 165, 202);
+        }
+
+        .juego-imagen {
+            width: 250px; /* Ancho deseado */
+            height: 190px; /* Altura deseada */
+            position: absolute;
+            margin-left: 580px; /* Margen izquierdo para separar la imagen del texto */
+            margin-top: -150px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px white;
+            animation: reproducir 1s infinite paused;
+        }

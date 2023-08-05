@@ -4,36 +4,45 @@ const submenu = document.querySelector('.submenu');
 
 dropdown.addEventListener('mouseover', () => {
   submenu.style.display = 'block';
+  // Aplicar efecto de desenfoque a los elementos circundantes
+  applyBlurToSiblings(dropdown);
 });
 
 dropdown.addEventListener('mouseout', () => {
   submenu.style.display = 'none';
+  // Remover el efecto de desenfoque al salir del hover
+  removeBlurFromSiblings(dropdown);
 });
 
+const dropdowns = document.querySelectorAll('.dropdowns');
+const submenus = document.querySelectorAll('.submenus');
 
-const dropdowns = document.querySelector('.dropdowns');
-const submenus = document.querySelector('.submenus');
-
-dropdowns.addEventListener('mouseover', () => {
-  submenus.style.display = 'block';
-});
-
-dropdown.addEventListener('mouseout', () => {
-  submenus.style.display = 'none';
-});
-
-dropdown.forEach((dropdown, index) => {
-    const submenu = submenu[index];
+dropdowns.forEach((dropdown, index) => {
+    const submenu = submenus[index];
     dropdown.addEventListener('mouseover', () => {
         submenu.style.display = 'block';
+        // Aplicar efecto de desenfoque a los elementos circundantes
+        applyBlurToSiblings(dropdown);
     });
 
     dropdown.addEventListener('mouseout', () => {
         submenu.style.display = 'none';
+        // Remover el efecto de desenfoque al salir del hover
+        removeBlurFromSiblings(dropdown);
     });
 
-    dropdown.addEventListener('click', (event) => {
+    dropdowns.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the default behavior of the link (page navigation)
-        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        submenus.style.display = submenus.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+function applyBlurToSiblings(element) {
+  const siblings = Array.from(element.parentElement.children).filter(el => el !== element);
+  siblings.forEach(sibling => sibling.style.filter = 'blur(2px)');
+}
+
+function removeBlurFromSiblings(element) {
+  const siblings = Array.from(element.parentElement.children).filter(el => el !== element);
+  siblings.forEach(sibling => sibling.style.filter = 'none');
+}

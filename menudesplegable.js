@@ -46,3 +46,4 @@ function removeBlurFromSiblings(element) {
   const siblings = Array.from(element.parentElement.children).filter(el => el !== element);
   siblings.forEach(sibling => sibling.style.filter = 'none');
 }
+

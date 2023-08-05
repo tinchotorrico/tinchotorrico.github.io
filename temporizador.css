@@ -1,0 +1,111 @@
+  .temporizador {
+    position: absolute;
+  }
+  
+  .timer {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 3em;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 320px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('texture.jpg'); /* Reemplaza 'texture.jpg' con tu imagen de textura */
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+  }
+  
+  #hours, #minutes, #seconds {
+    display: inline-block;
+    min-width: 50px;
+    padding: 5px 15px;
+    background-color: rgba(68, 68, 68, 0.9); /* Cambia el color de fondo para la textura */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+  }
+  
+  #hours::before,
+  #minutes::before,
+  #seconds::before {
+    content: ':';
+    padding-right: 5px;
+    color: #999;
+  }
+  
+  .time-up {
+    background-color: #FF5959;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: blinkBackground 0.5s infinite;
+    /* Efecto de resplandor al tiempo agotado */
+    box-shadow: 0 0 10px rgba(255, 89, 89, 0.8), 0 0 20px rgba(255, 89, 89, 0.6);
+  }
+  
+  @keyframes blinkBackground {
+    0%, 100% {
+      background-color: #FF5959;
+    }
+    50% {
+      background-color: #FFADAD;
+    }
+  }
+  
+  /* Añadir bordes en degradado */
+  .timer {
+    background: linear-gradient(45deg, #333, #444);
+  }
+  
+  #hours, #minutes, #seconds {
+    background: linear-gradient(45deg, rgba(68, 68, 68, 0.9), rgba(102, 102, 102, 0.9));
+  }
+  
+  /* Agregar animación a los números */
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  #hours, #minutes, #seconds {
+    animation: fadeInOut 1s infinite;
+  }
+  
+  /* Animación de los separadores */
+  #hours::before,
+  #minutes::before,
+  #seconds::before {
+    animation: blinkSeparator 1s infinite;
+  }
+  
+  @keyframes blinkSeparator {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+  /* Efecto de escalado al tiempo agotado */
+  .time-up #hours, .time-up #minutes, .time-up #seconds {
+    animation: timeUpScale 0.5s infinite;
+  }
+  
+  @keyframes timeUpScale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+  }
+  

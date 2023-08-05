@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+    <link rel="icon" href="Imagenes\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="common-styles.css">
+    <link rel="stylesheet" href="css/recuadro.css">
+    <link rel="stylesheet" href="css/encuesta.css">
+    <link rel="stylesheet" href="css/menudesplegable.css">
+    <link rel="stylesheet" href="redes.css">
+    <link rel="stylesheet" href="juegosMenu.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, #031625, #590f72);
+            height: 500vh;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        p {
+            line-height: 1.5;
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-bottom: 1px;
+            margin-right: 1;
+            padding: 10px;
+        }
+
+        h2 {
+            font-size: 18px;
+            padding: 10px;
+
+            position: absolute;
+            top: -10px;
+            transform: translateX(-50%);
+            background-color: #a59595;
+        }
+
+        .TituloJuegosJugados {
+            font-size: 20px;
+            color:orange;
+            text-shadow: 1px 1px 0 rgb(255, 255, 255), -1px -1px 0 rgb(255, 238, 0), 5px -1px 0 rgb(0, 0, 0), -1px 1px 0 red;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 718px;
+        }
+
+        .header2 {
+            background-color: black;
+            height: 80px;
+            top: 10;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding-left: 90px;
+        }
+
+        .fondo {
+            position: absolute;
+            background: url('particles.gif') no-repeat center top;
+            background-size:cover;
+            height: 80px;
+            width: 100%;
+            margin-top: 0px;
+        }
+
+        .fondo-container {
+            position: absolute;
+            top: -100;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="redes">
+            <a href="https://discord.gg/V4ZBWY5N"><i id="discord" class="fa-brands fa-discord fa-fade"></i></a>
+            <a href="https://www.instagram.com/tinchotorrico/"><i id="instagram" class="fa-brands fa-instagram fa-fade"></i></a>
+            <a href="https://www.twitch.tv/tinchotorrico"><i id="twich" class="fa-brands fa-twitch fa-fade"></i></a>
+            <a href="https://www.youtube.com/channel/UChHXsD4BVqbGpW8EbKf603g"><i id="youtube" class="fa-brands fa-youtube fa-fade"></i></a>
+            <a href="https://www.tiktok.com/@tinchotorricook"><i id="tiktok" class="fa-brands fa-tiktok fa-fade"></i></a>
+        </div>
+        
+        <div class="header-texts">
+            <a href="index.html" class="header-text">HOME</a>
+            <a href="juegos.html" class="header-text">JUEGOS</a>
+            <div class="dropdown">
+                <a href="comunidad.html" class="header-text">COMUNIDAD</a>
+                <div class="submenu">
+                    <a href="Cromos.html">Cromos</a>
+                    <a href="Ruleta.html">Ruleta</a>
+                    <a href="Salon_de_la_fama.html">Salon de la Fama</a>
+                </div>
+            </div>
+            <div class="dropdowns">
+                <a href="Tincho.html" class="header-text" id="header-text">TINCHO</a>
+                <div class="submenus">
+                    <a href="Estadisticas_de_Transmisiones.html">Estadisticas de Transmisiones</a>
+                    <a href="Novedades.html">Novedades</a>
+                </div>
+            </div>
+        </div>
+          
+        
+    </header>
+
+    <div class="background2">
+        <form id="encuestaForm">
+            <div class="question" style="margin-top: 100px; margin-left: 900px; position: absolute">
+                <p>Proximo juego para traer al canal?</p>
+                <label class="option">
+                    <input type="radio" name="color" value="rojo">
+                    FNAF 3
+                    <span class="vote-count">0 votos</span>
+                    <div class="liquid-bar">
+                        <div class="liquid-level" style="width: 0%;"></div>
+                    </div>
+                </label>
+                <label class="option">
+                    <input type="radio" name="color" value="azul">
+                    The stanley parable
+                    <span class="vote-count">0 votos</span>
+                    <div class="liquid-bar">
+                        <div class="liquid-level" style="width: 0%;"></div>
+                    </div>
+                </label>
+                <label class="option">
+                    <input type="radio" name="color" value="verde">
+                    Slendetubbies
+                    <span class="vote-count">0 votos</span>
+                    <div class="liquid-bar">
+                        <div class="liquid-level" style="width: 0%;"></div>
+                    </div>
+                </label>
+                <label class="option">
+                    <input type="radio" name="color" value="amarillo">
+                    Planta vs Zombies
+                    <span class="vote-count">0 votos</span>
+                    <div class="liquid-bar">
+                        <div class="liquid-level" style="width: 0%;"></div>
+                    </div>
+                </label>
+            </div>
+    
+            <button type="submit">Enviar</button>
+        </form>
+        
+    </div>
+
+    <div class="header2">
+        <div class="fondo-container">
+            <div class="fondo"></div>
+        </div>
+        <div class="TituloJuegosJugados" style="margin-top: 50px;">
+            <h1>JUEGOS JUGADOS EN STREAM</h1>
+        </div>
+    </div>
+
+    <div class="menujuegos">
+        <section class="section-container" style="margin-top: 30px;">
+            <div id="section-juegos">
+                <h2 class="juegos-h2">Juegos Jugados en Stream</h2>
+            <div class="container-games">
+                <div class="card-games">
+                    <div class="card-image" style="background-image: url(&quot;https://images2.alphacoders.com/951/thumb-1920-951198.jpg&quot;);"></div><h3>Five Nights At Freddy 1 Remaster</h3><div class="container-p"><p>Ahora con todos sus dialogos, y textos traducidos completamente al español para disfrutar y conocer mas a fondo su iconico lore, ademas de presenciar de una iluminacion mejorada y texturas pulidas para dar una mejor experiencia y mas tenebrosa</p></div><div class="container-link-game"><a class="link-game" href="youtube.com" target="_blank"></a></div></div><div class="card-games">
+                    <div class="card-image" style="background-image: url(&quot;https://c4.wallpaperflare.com/wallpaper/161/146/412/five-nights-at-freddy-s-five-nights-at-freddy-s-2-wallpaper-preview.jpg&quot;);"></div><h3>Five Nights At Freddy 2 Remaster</h3><div class="container-p"><p>La segunda secuela de esta saga viene tambien mejorada, y con todo nuevamente traducido al español para seguir desentrañando poco a poco la historia</p></div><div class="container-link-game"><a class="link-game" href="youtube.com" target="_blank"></a></div></div><div class="card-games">
+                    <div class="card-image" style="background-image: url(&quot;https://images4.alphacoders.com/478/thumb-1920-47856.jpg&quot;);"></div><h3>Castle Crasher</h3><div class="container-p"><p>La segunda secuela de esta saga viene tambien mejorada, y con todo nuevamente traducido al español para seguir desentrañando poco a poco la historia</p></div><div class="container-link-game"><a class="link-game" href="youtube.com" target="_blank"></a></div></div></div>
+            
+            </div>
+        </section>
+    </div>
+
+
+    <script src="encuesta.js" defer></script>
+    <script src="menudesplegable.js" defer></script>
+    <script src="juegosMenu.js"></script>
+</body>
+</html>

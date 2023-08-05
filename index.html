@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spacetn</title>
+    <link rel="icon" href="Imagenes\favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="common-styles.css">
     <link rel="stylesheet" href="css/menudesplegable.css">
     <link rel="stylesheet" href="redes.css">
+    <link rel="stylesheet" href="temporizador.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -56,13 +58,16 @@
         <div class="texto-encima">
             <h1>Estamos trabajando para que sea una excelente pagina</h1>
             <p>Faltan aprox 2893923218243 dias para tenerla lista.</p>
+            <div class="container" style="margin-left: 150px; margin-top: 100px">
+                <div class="timer" id="timer" style="margin-top: 110px;">
+                  <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="contenido">
-    </div>
-    
+     </div>
 
     <script src="menudesplegable.js" defer></script>
+    <script src="temporizador.js" defer></script>
 
 </body>
 </html>

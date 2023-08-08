@@ -9,7 +9,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: calc(90px);
+    padding-left: calc(70px);
 }
 
 .background1 {
@@ -24,6 +24,15 @@ header {
 .background2 {
     position: relative;
     background: url('background2.png') no-repeat center top;
+    background-size:cover;
+    height: calc(100vh);
+    width: calc(100%);
+    margin-top: calc(0px);
+}
+
+.background3 {
+    position: relative;
+    background: url("Imagenes/Salon\ de\ la\ Fama.jpg");
     background-size:cover;
     height: calc(100vh);
     width: calc(100%);

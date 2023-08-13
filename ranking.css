@@ -1,0 +1,120 @@
+.ranking_block {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.podio1_ranking {
+    position: relative;
+    width: 160px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 576px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background-color: rgba(255, 209, 84, 0.9); /* Cambia el color de fondo para la textura */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+}
+
+.podio2_ranking {
+    position: relative;
+    width: 180px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 568px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+}
+
+.podio3_ranking {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 560px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+}
+
+.podio4_ranking {
+    position: relative;
+    width: 220px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 552px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+}
+
+.podio5_ranking {
+    position: relative;
+    width: 240px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 544px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+}
+
+.podio6_ranking {
+    position: relative;
+    width: 260px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 536px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+}
+
+.podio7_ranking {
+    position: relative;
+    width: 280px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 528px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+}
+
+.podio8_ranking {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 520px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+}

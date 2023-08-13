@@ -9,16 +9,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: calc(70px);
 }
 
 .background1 {
     position: relative; /* Agregamos la posición relativa al contenedor para que el posicionamiento absoluto del texto sea relativo a este contenedor */
-    background: url('background1.png') no-repeat center top; /* Ruta de la imagen y posición */
+    background:linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent, transparent, rgba(0, 0, 0, 0.3)),  url('background1.png') no-repeat center top; /* Ruta de la imagen y posición */
     background-size: cover; /* Ajusta la imagen al tamaño del div */
     height: calc(100vh); /* Ajusta la altura a tu preferencia */
     margin-top: calc(0px); /* Ajusta el valor para que el contenido no se oculte detrás del header */
     box-shadow: 6 6 3000px rgb(255, 0, 0);
+    display: flex;
 }
 
 .background2 {
@@ -37,6 +37,15 @@ header {
     height: calc(100vh);
     width: calc(100%);
     margin-top: calc(0px);
+}
+
+.background4 {
+    position: relative;
+    background: url("https://miro.medium.com/v2/resize:fit:2000/0*eIhVp0KXrXSSHORN.gif") no-repeat center top;
+    background-size: cover;
+    height: calc(120vh);
+    width: calc(100%);
+    margin-top: calc(550px)
 }
 .contenido {
     padding: 20px;

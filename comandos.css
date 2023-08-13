@@ -1,0 +1,139 @@
+.recuadro {
+    position: absolute;
+    background-color: #232323;
+    border: 1px solid #444444;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ff6600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #ff9933;
+  }
+
+  .divider {
+    margin: 15px auto;
+    width: 50%;
+    height: 1px;
+    background-color: #444444;
+  }
+
+  p {
+    font-size: 14px;
+    color: #888888;
+    margin-top: 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #ff9933;
+  }
+
+  .glow1 {
+    animation: glow1-animation 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow1-animation {
+    from {
+      text-shadow: 0 0 10px #ff6600;
+    }
+    to {
+      text-shadow: 0 0 20px #ff9933;
+    }
+  }
+
+  .glow2 {
+    animation: glow2-animation 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow2-animation {
+    from {
+      text-shadow: 0 0 10px #6e3462;
+    }
+    to {
+      text-shadow: 0 0 20px #c75fbe;
+    }
+  }
+
+  .comandoface1{
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  margin-left: 165px;
+  display: flex;
+  }
+
+  .comandoface1 {
+    animation: comandoface1-animation 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes comandoface1-animation {
+    from {
+      border-color: 0 0 10px #6e3462;
+    }
+    to {
+      border-color: 0 0 20px #c75fbe;
+    }
+  }
+
+  .comandoface2{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    margin-left: 1035px;
+    display: flex;
+    }
+
+    .comandoface2 {
+      animation: comandoface2-animation 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes comandoface2-animation {
+      from {
+        border: 0 0 100px #6e3462;
+      }
+      to {
+        border: 0 0 20px #c75fbe;
+      }
+    }

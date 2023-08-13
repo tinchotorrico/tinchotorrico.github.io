@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/menudesplegable.css">
     <link rel="stylesheet" href="redes.css">
     <link rel="stylesheet" href="temporizador.css">
+    <link rel="stylesheet" href="comandos.css">
+    <link rel="stylesheet" href="effectWordIndex.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,6 +20,8 @@
     <style>
 
         body {
+            height: calc(2000px);
+            background-color: #e2b7b7;
             position: relative;
             background-color: #000000;
             margin: 0;
@@ -58,19 +62,53 @@
     </header>
      <div class="background1">
         <div class="texto-encima">
-            <h1>Estamos trabajando para que sea una excelente pagina</h1>
-            <p>Faltan aprox 2893923218243 dias para tenerla lista.</p>
-            <div class="container" style="margin-left: 150px; margin-top: 100px">
-                <div class="timer" id="timer" style="margin-top: 110px;">
+            <div class='console-container' style="margin-left: -100px;"><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+            <div class="container" style="margin-left: 10%; margin-top: 300px">
+                <div class="timer" id="timer" style="margin-top: 210px;">
                   <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
                 </div>
             </div>
         </div>
      </div>
+     <div class="recuadro" style="margin-top: 50px; margin-left: 30px;">
+        <h1 class="glow1">¡Comandos del canal!</h1>    
+        <ul>
+          <li><strong><a href="#">!sabias</a></strong> - ¡Arroja un dato al azar interesante!</li>
+          <li><strong><a href="#">!wsp</a></strong> - Envia un enlace para unirse al grupo de wsp.</li>
+          <li><strong><a href="#">!redes</a></strong> - ¡Envia un mensaje que contiene todas las redes sociales de Tincho!</li>
+          <li><strong><a href="#">!regalo</a></strong> - ¡Hazle un regalo misterioso a otro usuario!</li>
+        </ul>
+        <div class="divider"></div>
+        <p>Estos comandos pueden ser utilizados por cualquier usuario en el <a href="https://www.twitch.tv/tinchotorrico">canal</a> y solo dependen de su cooldown.</p>
+        <button class="btn">¡Suscríbete!</button>
+      </div>
 
+      <div class="recuadro" style="margin-top: 50px; margin-left: 900px;">
+        <h1 class="glow2">¡Comandos para subscriptores!</h1>    
+        <ul>
+          <li><strong><a href="#">!sabias</a></strong> - ¡Arroja un dato al azar interesante!</li>
+          <li><strong><a href="#">!wsp</a></strong> - Envia un enlace para unirse al grupo de wsp.</li>
+          <li><strong><a href="#">!redes</a></strong> - ¡Envia un mensaje que contiene todas las redes sociales de Tincho!</li>
+          <li><strong><a href="#">!regalo</a></strong> - ¡Hazle un regalo misterioso a otro usuario!</li>
+        </ul>
+        <div class="divider"></div>
+        <p>Los comandos de esta lista son exclusivos y solo pueden ser utilizados en un directo por aquellos usuarios que tengan una sub activa en el <a href="https://www.twitch.tv/tinchotorrico">canal</a> y algunos tienen uso limitado por directo.</p>
+        <button class="btn">¡Suscríbete!</button>
+      </div>
+    <div>
+        <img src="Imagenes/geometrydash1.png" class="comandoface1">
+        <img src="Imagenes/geometrydash2.png" class="comandoface2">
+    </div>
+    
+    <div class="background4">
+    </div>
+
+    
+    
     <script src="menudesplegable.js" defer></script>
     <script src="temporizador.js" defer></script>
     <script src="detectdevices.js" defer></script>
+    <script src="effectWordIndex.js" defer></script>
 
 </body>
 </html>

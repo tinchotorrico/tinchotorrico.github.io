@@ -1,240 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Wordle</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f5f5f5;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
 
-        h1 {
-            color: #333;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
+  .wheel-container {
+    position: relative;
+  }
 
-        p {
-            font-size: 18px;
-        }
+  .wheel {
+    width: 300px;
+    height: 300px;
+    background: conic-gradient(
+      from -90deg,
+      #ff9900 0%,
+      #ff9900 16.66%,
+      #ffcc00 16.66%,
+      #ffcc00 33.33%,
+      #66cc33 33.33%,
+      #66cc33 50%,
+      #0099cc 50%,
+      #0099cc 66.66%,
+      #9933cc 66.66%,
+      #9933cc 83.33%,
+      #ff3366 83.33%,
+      #ff3366 100%
+    );
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: center;
+  }
 
-        .word-box {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .letter {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            font-size: 24px;
-            background-color: #ddd;
-            margin: 5px;
-            border-radius: 5px;
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            font-size: 24px;
-            text-transform: uppercase;
-        }
-
-        button {
-            padding: 12px 24px;
-            font-size: 18px;
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        #result {
-            margin-top: 30px;
-            font-weight: bold;
-            font-size: 20px;
-            color: #555;
-            text-align: center;
-        }
-
-        .correct-letter {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .incorrect-letter {
-            background-color: #FF5722;
-            color: white;
-            animation: highlight 1s;
-        }
-
-        .remaining-attempts {
-            font-size: 14px;
-        }
-
-        .clue {
-            font-size: 14px;
-            margin-top: 10px;
-        }
-
-        .correct-clue {
-            color: #4CAF50;
-        }
-
-        .incorrect-clue {
-            color: #FF5722;
-        }
-
-        .game-over {
-            background-color: #FF5722;
-            color: white;
-            padding: 8px;
-            border-radius: 5px;
-        }
-
-        @keyframes highlight {
-            0% { background-color: inherit; }
-            50% { background-color: #ffcccb; }
-            100% { background-color: inherit; }
-        }
-
-        .category-buttons {
-            margin-top: 20px;
-        }
-
-        .category-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 5px;
-            background-color: #2196F3;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+  .pointer {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+</style>
+<title>Ruleta de la Suerte</title>
 </head>
 <body>
-    <h1>Wordle</h1>
-    <p>Guess the 5-letter word:</p>
-    <div class="word-box">
-        <div class="letter" id="letter1"></div>
-        <div class="letter" id="letter2"></div>
-        <div class="letter" id="letter3"></div>
-        <div class="letter" id="letter4"></div>
-        <div class="letter" id="letter5"></div>
-    </div>
-    <input type="text" id="wordInput" maxlength="5" autocomplete="off">
-    <button onclick="checkWord()">Check</button>
-    <button onclick="resetGame()">Restart</button>
-    <div class="category-buttons">
-        <button class="category-button" onclick="setCategory('easy')">Easy</button>
-        <button class="category-button" onclick="setCategory('intermediate')">Intermediate</button>
-        <button class="category-button" onclick="setCategory('difficult')">Difficult</button>
-    </div>
-    <p class="clue" id="clue"></p>
-    <p id="result"></p>
-    <p class="remaining-attempts" id="remainingAttempts"></p>
+<div class="wheel-container">
+  <div class="wheel" id="wheel"></div>
+  <div class="pointer" id="pointer"></div>
+</div>
+<script>
+  const wheel = document.getElementById('wheel');
+  const pointer = document.getElementById('pointer');
+  let spinning = false;
 
-    <script>
-        const categories = {
-            easy: ["apple", "orange", "lemon", "grape", "banana"],
-            intermediate: ["kiwi", "melon", "peach", "plum", "mango"],
-            difficult: ["cherry", "strawberry", "apricot", "papaya", "guava"]
-        };
-        let currentCategory = "easy";
-        let randomWord;
-        let attempts = 0;
-        const maxAttempts = 10;
-        let remainingAttempts = maxAttempts;
-
-        function setCategory(category) {
-            currentCategory = category;
-            resetGame();
-        }
-
-        function getRandomWord() {
-            const wordList = categories[currentCategory];
-            return wordList[Math.floor(Math.random() * wordList.length)];
-        }
-
-        function checkWord() {
-            if (attempts === 0) {
-                randomWord = randomWord || getRandomWord();
-                randomWord = wordList[Math.floor(Math.random() * wordList.length)];
-            }
-
-            const inputElement = document.getElementById("wordInput");
-            const guessedWord = inputElement.value.toLowerCase();
-            attempts++;
-
-            const letters = document.querySelectorAll(".letter");
-            letters.forEach(letter => {
-                letter.classList.remove("correct-letter", "incorrect-letter");
-                letter.style.animation = "";
-            });
-
-            if (guessedWord === randomWord) {
-                resultMessage = `Congratulations! You guessed the word "${randomWord}" in ${attempts} attempts.`;
-                inputElement.disabled = true;
-                document.getElementById("result").classList.add("game-over");
-            } else {
-                remainingAttempts--;
-
-                if (remainingAttempts === 0) {
-                    resultMessage = `Game Over! The word was "${randomWord}".`;
-                    inputElement.disabled = true;
-                    document.getElementById("result").classList.add("game-over");
-                } else {
-                    const clue = showClue(guessedWord, randomWord);
-                    resultMessage = `Attempt ${attempts}: "${guessedWord}" - ${clue}.`;
-                }
-            }
-
-            document.getElementById("result").textContent = resultMessage;
-            document.getElementById("remainingAttempts").textContent = `Remaining Attempts: ${remainingAttempts}`;
-        }
-
-        function showClue(guessedWord, randomWord) {
-            const clueElement = document.getElementById("clue");
-            let clue = "";
-
-            for (let i = 0; i < guessedWord.length; i++) {
-                if (guessedWord[i] === randomWord[i]) {
-                    clue += `<span class="correct-clue">${guessedWord[i]}</span>`;
-                } else if (randomWord.includes(guessedWord[i])) {
-                    clue += `<span class="incorrect-clue">${guessedWord[i]}</span>`;
-                } else {
-                    clue += "_";
-                }
-                clue += " ";
-            }
-
-            clueElement.innerHTML = clue.trim();
-        }
-
-        function resetGame() {
-            attempts = 0;
-            remainingAttempts = maxAttempts;
-            randomWord = wordList[Math.floor(Math.random() * wordList.length)];
-            const letters = document.querySelectorAll(".letter");
-            letters.forEach(letter => {
-                letter.classList.remove("correct-letter", "incorrect-letter");
-                letter.style.animation = "";
-            });
-            document.getElementById("wordInput").value = "";
-            document.getElementById("wordInput").disabled = false;
-            document.getElementById("result").textContent = "";
-            document.getElementById("remainingAttempts").textContent = `Remaining Attempts: ${remainingAttempts}`;
-            document.getElementById("clue").textContent = "";
-            document.getElementById("result").classList.remove("game-over");
-        }
-    </script>
+  pointer.addEventListener('click', () => {
+    if (!spinning) {
+      spinning = true;
+      const randomDegree = 60 * Math.floor(Math.random() * 6);
+      wheel.style.transition = 'transform 5s cubic-bezier(0.36, 2.17, 0.88, 1.03)';
+      wheel.style.transform = `rotate(${randomDegree + 2160}deg)`; // 2160 grados para girar 6 vueltas
+      setTimeout(() => {
+        wheel.style.transition = 'transform 3s ease-out';
+        wheel.style.transform = `rotate(${randomDegree}deg)`;
+        setTimeout(() => {
+          spinning = false;
+        }, 3000);
+      }, 5000);
+    }
+  });
+</script>
 </body>
 </html>

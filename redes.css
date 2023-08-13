@@ -36,6 +36,7 @@ li {
 
 .redes {
     margin-right: 3%;
+    margin-left: calc(3%);
 }
 
 .redes a,

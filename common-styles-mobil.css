@@ -2,7 +2,7 @@
 header {
     /* Mantener los estilos originales */
     background-color: rgb(255, 255, 255);
-    height: calc(80px);
+    height: calc(800px);
     position: fixed;
     top: calc(0);
     left: calc(0);

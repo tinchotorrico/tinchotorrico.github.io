@@ -1,58 +1,78 @@
-/* Estilos generales para el header */
-header {
-    /* Mantener los estilos originales */
-    background-color: rgb(255, 255, 255);
-    height: calc(800px);
+/* Estilos para el encabezado */
+.header {
+    background-color: black;
+    height: 60px; /* Reducimos la altura para dispositivos móviles */
     position: fixed;
-    top: calc(0);
-    left: calc(0);
-    width: calc(100%);
-    z-index: calc(999);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: calc(70px);
 }
 
-/* Ajustar el tamaño del texto en el header para dispositivos móviles */
-.header-text {
-    font-size: 16px;
+.header-texts {
+    display: none; /* Ocultamos los textos en el encabezado para dispositivos móviles */
 }
 
-/* Ajustar el tamaño de los íconos de redes sociales para dispositivos móviles */
-.social-logo {
-    width: 30px;
-    height: 30px;
+/* Estilos para los fondos */
+.background1,
+.background2,
+.background3,
+.background4 {
+    height: 100vh; /* Ajustamos la altura al 100% del viewport */
+    margin-top: 60px; /* Consideramos la altura del encabezado */
+    position: relative;
 }
 
-/* Estilos para el texto encima de las imágenes */
+/* Estilos para el texto en el fondo */
 .texto-encima {
-    font-size: 24px; /* Ajustar el tamaño del texto para dispositivos móviles */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    padding: 5px; /* Reducir el espacio interno para el texto */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 18px; /* Ajustamos el tamaño del texto para dispositivos móviles */
+    padding: 10px;
 }
 
-/* Estilos específicos para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    /* Ajustar el tamaño del header para dispositivos móviles */
-    header {
-        height: 60px;
-    }
-
-    /* Ajustar el tamaño de los textos en el header para dispositivos móviles */
-    .header-text {
-        font-size: 14px;
-    }
-
-    /* Ajustar el tamaño de los íconos de redes sociales para dispositivos móviles */
-    .social-logo {
-        width: 24px;
-        height: 24px;
-    }
-
-    /* Ajustar el tamaño del texto encima de las imágenes para dispositivos móviles */
-    .texto-encima {
-        font-size: 18px;
-        padding: 2px; /* Reducir el espacio interno para el texto */
-    }
+/* Estilos para las animaciones */
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 }
+
+/* Estilos para los íconos de redes sociales */
+.social-logo {
+    display: flex;
+    gap: 10px; /* Aumentamos el espacio entre los logos */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.social-logo img {
+    width: 30px; /* Reducimos el tamaño de los íconos */
+    height: 30px;
+    animation: parpadeo 1s infinite;
+}
+
+/* Estilos para el texto en el encabezado */
+.header-text {
+    display: none; /* Ocultamos los textos en el encabezado para dispositivos móviles */
+}
+
+/* Estilos generales para contenido */
+.contenido {
+    padding: 10px; /* Ajustamos el espacio interno para dispositivos móviles */
+}
+
+/* Estilos para el contenedor con degradado */
+.degradado {
+    height: auto; /* Ajustamos la altura según el contenido */
+    padding: 10px;
+    background-image: linear-gradient(to bottom, #ff0000, #9e5757);
+}
+

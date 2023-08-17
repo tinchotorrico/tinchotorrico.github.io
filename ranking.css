@@ -4,6 +4,12 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    margin: 0 20%; /* Espacio de 30px entre los textos (30px/2 en cada lado) */
+    color: rgb(0, 0, 0); /* Color del texto */
+    cursor: pointer; /* Opcional: para mostrar que son enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 
@@ -15,10 +21,10 @@
     margin-left: 576px;
     margin-bottom: 10px;
     padding: 5px 15px;
-    background-color: rgba(255, 209, 84, 0.9); /* Cambia el color de fondo para la textura */
+    background-color: rgba(255, 209, 84, 0.9);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .podio2_ranking {
@@ -29,7 +35,7 @@
     margin-left: 568px;
     margin-bottom: 10px;
     padding: 5px 15px;
-    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    background-color: rgba(224, 224, 224, 0.9); /* Cambia el color de fondo para la textura */
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
@@ -43,7 +49,7 @@
     margin-left: 560px;
     margin-bottom: 10px;
     padding: 5px 15px;
-    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    background-color: rgba(252, 217, 201, 0.9); /* Cambia el color de fondo para la textura */
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
@@ -57,7 +63,7 @@
     margin-left: 552px;
     margin-bottom: 10px;
     padding: 5px 15px;
-    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
@@ -71,7 +77,7 @@
     margin-left: 544px;
     margin-bottom: 10px;
     padding: 5px 15px;
-    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
@@ -85,7 +91,7 @@
     margin-left: 536px;
     margin-bottom: 10px;
     padding: 5px 15px;
-    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
@@ -99,7 +105,7 @@
     margin-left: 528px;
     margin-bottom: 10px;
     padding: 5px 15px;
-    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
@@ -113,8 +119,26 @@
     margin-left: 520px;
     margin-bottom: 10px;
     padding: 5px 15px;
-    background-color: rgba(255, 244, 244, 0.9); /* Cambia el color de fondo para la textura */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agregar sombra a los números */
+}
+
+.top3ranking {
+    margin-top: calc(-28%);
+    margin-left: calc(39.92%);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+    justify-content: center;
+    animation: float 3s infinite alternate;
+    pointer-events: none;
+    user-select: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-3px); } /* Ajusta la distancia de levitación */
 }

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="media_queries/android/menu_desplegable.css">
+    <link rel="stylesheet" href="media_queries/android/redes_logo.css">
+    <link rel="stylesheet" href="media_queries/android/dispositivo_movil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Detección de Dispositivo</title>
+    <style>
+
+        /* Estilos para dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            
+        }
+
+        /* Estilos para PC */
+        @media screen and (min-width: 769px) {
+            body {
+                height: calc(2000px);
+                background-image: linear-gradient(to bottom right, #031625, #590f72);
+                position: relative;
+                background-color: #000000;
+                margin: 0;
+                padding: 0;
+            }
+
+            .background1 {
+                position: relative; /* Agregamos la posición relativa al contenedor para que el posicionamiento absoluto del texto sea relativo a este contenedor */
+                background:linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent, transparent, rgba(0, 0, 0, 0.3)),  url('background1.png') no-repeat center top; /* Ruta de la imagen y posición */
+                background-size: cover; /* Ajusta la imagen al tamaño del div */
+                height: calc(100vh); /* Ajusta la altura a tu preferencia */
+                margin-top: calc(0px); /* Ajusta el valor para que el contenido no se oculte detrás del header */
+                box-shadow: 6 6 3000px rgb(255, 0, 0);
+                display: flex;
+            }
+
+                        /***header***/
+            header {
+                background-color: black;
+                height: calc(80px);
+                position: fixed;
+                top: calc(0);
+                left: calc(0);
+                width: calc(100%);
+                z-index: calc(999);
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+            
+
+            .contenido {
+                padding: 20px;
+            }
+
+            @keyframes parpadeo {
+                0% { opacity: 1; } /* Opacidad completa al inicio */
+                50% { opacity: 0.5; } /* Opacidad reducida al 50% */
+                100% { opacity: 1; } /* Opacidad completa al final */
+            }
+  
+            /* Aplicamos la animación a los íconos de las redes sociales */
+            .social-logo img {
+                animation: parpadeo 1s infinite;
+            }
+
+            .social-logo {
+                display: flex;
+                gap: 0px; /* Espacio entre los logos (horizontal) */
+                margin-top: 10px; /* Espacio hacia arriba */
+                margin-bottom: 10px; /* Espacio hacia abajo */
+            }
+
+            .social-logo {
+                width: 38px;
+                height: 38px;
+            }
+
+            /* Estilos para los textos en el header */
+            .header-texts {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                margin-top: 0px;
+                margin-left: 10%;
+                gap: 2px; /* Espacio de 30px entre los textos */
+                text-decoration: none;
+            }
+
+            .header-text {
+                margin: 0 18px;
+                font-size: 20px;
+                color: white;
+                cursor: pointer;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            /* Estilo para el cambio de color en hover */
+            .header-text:hover {
+                color: #ff9900; /* Cambia el color del texto al pasar el cursor sobre él */
+            }
+
+            .texto-encima {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: white;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            .texto-encima {
+                color: white; /* Color del texto */
+                text-shadow: 
+                -1px -1px 0 black,  
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black; /* Sombra para simular el contorno */
+
+            /* Configuración del espacio interno */
+            padding: 10px; /* Opcional: añadimos un espacio interno de 10px para que el texto no quede pegado al borde */
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="redes">
+            <a href="https://discord.gg/V4ZBWY5N"><i id="discord" class="fa-brands fa-discord fa-fade"></i></a>
+            <a href="https://www.instagram.com/tinchotorrico/"><i id="instagram" class="fa-brands fa-instagram fa-fade"></i></a>
+            <a href="https://www.twitch.tv/tinchotorrico"><i id="twich" class="fa-brands fa-twitch fa-fade"></i></a>
+            <a href="https://www.youtube.com/channel/UChHXsD4BVqbGpW8EbKf603g"><i id="youtube" class="fa-brands fa-youtube fa-fade"></i></a>
+            <a href="https://www.tiktok.com/@tinchotorricook"><i id="tiktok" class="fa-brands fa-tiktok fa-fade"></i></a>
+        </div>
+
+        <div class="header-texts">
+            <a href="index.html" class="header-text">HOME</a>
+            <a href="juegos.html" class="header-text">JUEGOS</a>
+            <div class="dropdown">
+                <a href="comunidad.html" class="header-text">COMUNIDAD</a>
+                <div class="submenu">
+                    <a href="Cromos.html">Cromos</a>
+                    <a href="Ruleta.html">Ruleta</a>
+                    <a href="Salon_de_la_fama.html">Salon de la Fama</a>
+                </div>
+            </div>
+            <div class="dropdowns">
+                <a href="Tincho.html" class="header-text" id="header-text">TINCHO</a>
+                <div class="submenus">
+                    <a href="Estadisticas_de_Transmisiones.html">Estadisticas de Transmisiones</a>
+                    <a href="Novedades.html">Novedades</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="background1">
+        <div class="texto-encima"></div>
+    <script>
+        // JavaScript para mostrar información sobre el dispositivo
+        function detectDevice() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            const deviceInfo = isMobile ? "Dispositivo móvil" : "PC";
+            
+            const deviceElement = document.createElement("p");
+            deviceElement.textContent = "Estás visitando desde un " + deviceInfo;
+            document.body.appendChild(deviceElement);
+        }
+
+        detectDevice();
+    </script>
+    <script src="menudesplegable.js" defer></script>
+</body>
+</html>

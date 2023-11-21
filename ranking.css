@@ -8,7 +8,6 @@
     margin: 0 20%; /* Espacio de 30px entre los textos (30px/2 en cada lado) */
     color: rgb(0, 0, 0); /* Color del texto */
     cursor: pointer; /* Opcional: para mostrar que son enlaces */
-    text-decoration: none;
     transition: color 0.3s ease;
 }
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borde de Estilo Neón</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #000;
+        }
+
+        .neon-border {
+            padding: 20px;
+            font-size: 24px;
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #f06;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #f06,
+                        0 0 30px #f06,
+                        0 0 40px #f06,
+                        0 0 60px #f06;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px #f06,
+                            0 0 30px #f06,
+                            0 0 40px #f06,
+                            0 0 60px #f06;
+            }
+            to {
+                box-shadow: 0 0 30px #f06,
+                            0 0 40px #f06,
+                            0 0 50px #f06,
+                            0 0 70px #f06;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="neon-border">
+        Contenido del recuadro
+    </div>
+</body>
+</html>

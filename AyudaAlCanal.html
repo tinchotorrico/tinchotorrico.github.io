@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyudaAlCanal</title>
+    <link rel="icon" href="Imagenes\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="common-styles.css">
+    <link rel="stylesheet" href="css/menudesplegable.css">
+    <link rel="stylesheet" href="redes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2087795218762804"
+     crossorigin="anonymous"></script>
+    <style>
+
+        body {
+            background-color: #a59595;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-bottom: 1px;
+            margin-right: 1;
+            padding: 10px;
+        }
+        .logo-container {
+            position: relative;
+            margin-left: 15px;
+            margin-top: 80px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            animation: none;
+        }
+
+        .logo.gamersfy {
+            margin-top: 80px;
+            margin-left: -74px;
+            
+        }
+
+        .logo.kwaii {
+            margin-top: 160px;
+            margin-left: -88px;
+        }
+
+        .image-container {
+            position: absolute;
+            top: calc(20%);
+            left: calc(100% + 20px);
+            transform: translateY(-50%);
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .image {
+            width: 160px;
+            height: 250px;
+            background-size: cover;
+            animation: none;
+        }
+
+        .logo.open {
+            animation: bounce 0.5s forwards;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            filter: blur(2px);
+        }
+
+        .logo.open + .image-container {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="redes">
+            <a href="https://discord.gg/V4ZBWY5N"><i id="discord" class="fa-brands fa-discord fa-fade"></i></a>
+            <a href="https://www.instagram.com/tinchotorrico/"><i id="instagram" class="fa-brands fa-instagram fa-fade"></i></a>
+            <a href="https://www.twitch.tv/tinchotorrico"><i id="twich" class="fa-brands fa-twitch fa-fade"></i></a>
+            <a href="https://www.youtube.com/channel/UChHXsD4BVqbGpW8EbKf603g"><i id="youtube" class="fa-brands fa-youtube fa-fade"></i></a>
+            <a href="https://www.tiktok.com/@tinchotorricook"><i id="tiktok" class="fa-brands fa-tiktok fa-fade"></i></a>
+        </div>
+
+        <div class="header-texts">
+            <a href="index.html" class="header-text">HOME</a>
+            <a href="juegos.html" class="header-text">JUEGOS</a>
+            <div class="dropdown">
+                <a href="comunidad.html" class="header-text">COMUNIDAD</a>
+                <div class="submenu">
+                    <a href="Cromos.html">Cromos</a>
+                    <a href="Ruleta.html">Ruleta</a>
+                    <a href="Salon_de_la_fama.html">Salon de la Fama</a>
+                </div>
+            </div>
+            <div class="dropdowns">
+                <a href="Tincho.html" class="header-text" id="header-text">TINCHO</a>
+                <div class="submenus">
+                    <a href="Estadisticas_de_Transmisiones.html">Estadisticas de Transmisiones</a>
+                    <a href="Novedades.html">Novedades</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="background1">
+        <div class="logo-container">
+            <div class="logo" style="background-image: url('Imagenes/publicidad/instreamlylogo.png')"onclick="toggleImage(this)"></div>
+            <div class="image-container">
+                <a href="https://instream.ly/r/tinchotorrico" target="_blank">
+                    <div class="image" style="background-image: url('Imagenes/publicidad/INSTREAMLY.jpg'); margin-top:30px;"></div>
+                </a>
+            </div>
+        </div>
+    
+        <div class="logo-container">
+            <div class="logo gamersfy" style="background-image: url('Imagenes/publicidad/gamersfylogo.png')" onclick="toggleImage(this)"></div>
+            <div class="image-container">
+                <a href="http://onelink.to/3wkuzp" target="_blank">
+                    <div class="image" style="background-image: url('Imagenes/publicidad/gamersfy.png'); margin-top:200px; margin-left: -15px;"></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="logo-container">
+            <div class="logo kwaii" style="background-image: url('Imagenes/publicidad/kwaiilogo.png')" onclick="toggleImage(this)"></div>
+            <div class="image-container">
+                <div class="image" style="background-image: url('Imagenes/publicidad/gamersfy.png'); margin-top:120px; margin-left: -15px;">
+                    <a class="image" href="https://tii.la/V42CteybBQR" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+     
+    <div class="contenido">
+    </div>
+    
+
+    <script src="menudesplegable.js" defer></script>
+    <script>
+        function toggleImage(logo) {
+            logo.classList.toggle("open");
+        }
+    </script>
+
+
+</body>
+</html>

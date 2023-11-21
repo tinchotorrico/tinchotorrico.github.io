@@ -1,4 +1,4 @@
-.recuadro {
+.recuadroA{
     position: absolute;
     background-color: #232323;
     border: 1px solid #444444;
@@ -9,6 +9,40 @@
     color: #ffffff;
     text-align: center;
   }
+
+  .recuadroA:hover{
+    background-color: #3f3f3f;
+    border: 1px solid #efffc2;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all .5s ease;
+}
+
+.recuadroB{
+  position: absolute;
+  background-color: #232323;
+  border: 1px solid #632e63;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.recuadroB:hover{
+  background-color: #3f3f3f;
+  border: 1px solid #ff64ff;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all .5s ease;
+  box-shadow: 0 0 20px rgb(192, 121, 177),
+                  0 0 10px rgb(192, 121, 177),
+                  0 0 20px rgb(192, 121, 177),
+                  0 0 30px rgb(192, 121, 177);
+}
 
   .h1 {
     font-size: 32px;
@@ -100,8 +134,11 @@
   width: 150px;
   height: 100px;
   position: absolute;
-  margin-left: 165px;
+  margin-left: calc(24.6%);
+  margin-top: calc(-42%);
   display: flex;
+  pointer-events: none;
+  user-select: none;
   }
 
   .comandoface1 {
@@ -121,8 +158,11 @@
     width: 150px;
     height: 100px;
     position: absolute;
-    margin-left: 1035px;
+    margin-left: calc(24.6%);
+    margin-top: calc(-50%);
     display: flex;
+    pointer-events: none;
+    user-select: none;
     }
 
     .comandoface2 {

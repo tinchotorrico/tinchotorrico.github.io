@@ -1,0 +1,70 @@
+.publicidad_gamersfy {
+    width: 200px;
+    height: 280px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.publicidad_instreamly {
+    position: relative;
+    width: 200px;
+    height: 280px;
+    margin-top: 300px;
+    margin-left: -200px;
+}
+
+.logo-container {
+    position: relative;
+}
+
+.logo {
+    width: 60px; /* Reducido a la mitad */
+    height: 60px; /* Reducido a la mitad */
+    background-image: url('Imagenes/publicidad/instreamlylogo.png');
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Agregado filter */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    animation: none;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.image-container {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 20px); /* Alinea a la derecha del círculo */
+    transform: translateY(-50%);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image {
+    width: 180px; /* Mitad de 360 */
+    height: 300px; /* Mitad de 600 */
+    background-image: url('Imagenes/publicidad/INSTREAMLY.jpg');
+    background-size: cover;
+    animation: none;
+}
+
+.logo.open {
+    animation: bounce 0.5s forwards; /* Agregado efecto de rebote */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    filter: blur(2px); /* Agregado efecto de difuminado */
+}
+
+.logo.open + .image-container {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s forwards; /* Agregado efecto de aparición */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

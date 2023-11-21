@@ -45,7 +45,7 @@ header {
     background-size: cover;
     height: calc(120vh);
     width: calc(100%);
-    margin-top: calc(550px)
+    margin-top: calc(550px);
 }
 .contenido {
     padding: 20px;
@@ -86,12 +86,12 @@ header {
 }
 
 .header-text {
-    margin: 0 18px; /* Espacio de 30px entre los textos (30px/2 en cada lado) */
-    font-size: 20px; /* Ajusta el tamaño del texto según tu preferencia */
-    color: white; /* Color del texto */
-    cursor: pointer; /* Opcional: para mostrar que son enlaces */
+    margin: 0 18px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
     text-decoration: none;
-    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    transition: color 0.3s ease;
 }
 
 /* Estilo para el cambio de color en hover */
@@ -127,7 +127,6 @@ padding: 10px; /* Opcional: añadimos un espacio interno de 10px para que el tex
     position: absolute;
     margin-top: -38%;
     margin-left: 40%; /* Margen izquierdo para separar la imagen del texto */
-    position: absolute;
     z-index: 2;
 }
 

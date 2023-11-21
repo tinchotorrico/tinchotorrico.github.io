@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad</title>
+    <style>
+        @import url("common-styles.css");
+        @import url("recuadro.css");
+        body {
+            background-image: linear-gradient(to bottom right, #031625, #590f72);
+            height: 300vh;
+            margin: 0; /* Asegura que no haya espacios de margen en el cuerpo de la página */
+            padding: 0; /* Asegura que no haya espacios de relleno en el cuerpo de la página */
+            
+        }
+
+        p {
+            /* Tus estilos actuales para el párrafo */
+            line-height: 1.5;
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-bottom: 1px;
+            margin-right: 1;
+            padding: 10px;
+        }
+
+        h2 {
+            /* Tus estilos actuales para el título */
+            font-size: 18px;
+            padding: 10px;
+
+            position: absolute; /* Agregamos posición absoluta */
+            top: -10px; /* Alineamos la mitad superior del título con la línea superior del recuadro del párrafo */
+            transform: translateX(-50%); /* Corregimos el centrado horizontal */
+            background-color: #a59595; /* Establecemos el mismo color de fondo del cuerpo para que el recuadro se fusione visualmente */
+        }
+
+        .TituloJuegosJugados {
+            font-size: 20px;
+            color:orange;
+            text-shadow: 1px 1px 0 rgb(255, 255, 255), -1px -1px 0 rgb(255, 238, 0), 5px -1px 0 rgb(0, 0, 0), -1px 1px 0 red;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 718px;
+        }
+
+        .header2 {
+            background-color: black;
+            height: 80px;
+            top: 10;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding-left: 90px;
+        }
+
+        .fondo {
+            position: absolute;
+            background: url('particles.gif') no-repeat center top;
+            background-size:cover;
+            height: 80px;
+            width: 100%;
+            margin-top: 0px;
+        }
+
+        .minecraft {
+            position: absolute;
+            background: url('minecraft.gif') no-repeat center top;
+            background-size:auto;
+            height: 60px;
+            width: 30px;
+            margin-top: 80px;
+            margin-right: 200px;
+        }
+
+        .fondo-container {
+            position: absolute;
+            top: -100;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            overflow: hidden; /* Asegura que el contenido que exceda las dimensiones se oculte */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="social-logo"> 
+            <a href="https://www.twitch.tv/tinchotorrico" target="_blank"><img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\Twitch.png" alt="Logo de Twitch" width="38"></a>
+            <a href="https://www.tiktok.com/@tinchotorricook" target="_blank"><img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\Tik-Tok.png" alt="Logo de Tik Tok" width="38"></a>
+            <a href="https://www.youtube.com/channel/UChHXsD4BVqbGpW8EbKf603g" target="_blank"><img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\YouTube.png" alt="Logo de Youtube" width="38"></a>
+            <a href="https://www.instagram.com/tinchotorrico/" target="_blank"><img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\Instagram.png" alt="Logo de Twitter" width="38"></a>
+            <a href="https://discord.gg/V4ZBWY5N" target="_blank"><img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\Discord.png" alt="Logo de Discord" width="38"></a>
+        </div>
+        
+        <!-- Textos agregados -->
+        <div class="header-texts">
+            <a href="index.html" class="header-text">HOME</a>
+            <a href="juegos.html" class="header-text">JUEGOS</a>
+            <a href="comunidad.html" class="header-text">COMUNIDAD</a>
+            <a href="tincho.html" class="header-text">TINCHO</a>
+        </div>
+        
+    </header>
+
+    <div class="background2">
+        
+    </div>
+
+    <div class="header2">
+        <div class="fondo-container">
+            <div class="minecraft"></div>
+            <div class="fondo"></div>
+        </div>
+        <div class="minecraft"></div>
+        <div class="TituloJuegosJugados">
+            <h1>JUEGOS JUGADOS EN STREAM</h1>
+        </div>
+    </div>
+    </div>
+
+    <div>
+        <div class="recuadro">
+            <h2 class="titulo-recuadro">Five Nights At Freddy 1 Remaster</h2>
+            <p>Ahora con todos sus dialogos, y textos traducidos completamente al español para disfrutar y conocer mas a fondo su iconico lore, ademas de presenciar de una iluminacion mejorada y texturas pulidas para dar una mejor experiencia y mas tenebrosa</p>
+            <img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\fnafgif1.webp" alt="juego-imagen" class="juego-imagen">
+            <a href="https://tii.la/V42CteybBQR" target="_blank"><img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\link_descarga.webp" alt="link_descarga" class="link-descarga"></a>
+        </div>
+
+        <div class="recuadro">
+            <h2 class="titulo-recuadro">Five Nights At Freddy 2 Remaster</h2>
+            <p>La segunda secuela de esta saga viene tambien mejorada, y con todo nuevamente traducido al español para seguir desentrañando poco a poco la historia</p>
+            <img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\fnafgif2.gif" alt="juego-imagen" class="juego-imagen">
+            <a href="https://tii.la/plhFY49lSv" target="_blank"><img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\link_descarga.webp" alt="link_descarga" class="link-descarga"></a>
+        </div>
+
+        <div class="recuadro">
+            <h2 class="titulo-recuadro">Castle Crasher</h2>
+            <p>La segunda secuela de esta saga viene tambien mejorada, y con todo nuevamente traducido al español para seguir desentrañando poco a poco la historia</p>
+            <img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\castle_crashergif1.gif" alt="juego-imagen" class="juego-imagen">
+            <a href="https://tii.la/D1Rn3cK4" target="_blank"><img src="C:\Users\54297\Pictures\SpaceTN\Imagenes\link_descarga.webp" alt="link_descarga" class="link-descarga"></a>
+        </div>
+    </div>
+
+    <div class="fondo">
+    </div>
+
+
+
+
+
+        <!-- Puedes agregar más juegos aquí si deseas -->
+    <!-- Agrega aquí el contenido adicional que desees mostrar en esta página con fondo negro -->
+</body>
+</html>

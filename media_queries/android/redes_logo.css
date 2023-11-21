@@ -1,0 +1,131 @@
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 9;
+        display: flex;
+        width: 100%;
+        height: 60px;
+        max-width: 15px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        transition: .7s;
+        /* FONDO COLOR GRADIENTE */
+        background: rgb(22, 22, 22);
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .redes {
+        margin-right: 0%;
+        margin-left: calc(3%);
+    }
+
+    .redes a,
+    .links a {
+        position: relative;
+        text-decoration: none;
+        color: #a0a0a0;
+        font-size: 0.72rem;
+        padding: .1rem;
+        font-family: "Poppins";
+        padding: 0 1px;
+        font-weight: 700;
+    }
+
+    /*Hover links*/
+
+.links a:after {
+    content: "";
+    position: absolute;
+    background-color: #19245A;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+.links a:hover {
+    color: #fff;
+}
+
+/* Colores redes */
+
+#discord:hover {
+    color: #5865F2;
+}
+
+#youtube:hover {
+    color: #FF0000;
+}
+
+#instagram:hover {
+    color: #E4405F;
+}
+
+#twich:hover {
+    color: #9146FF;
+}
+
+#tiktok:hover {
+    color: #ffffff;
+}
+
+
+.navbar .links {
+    display: flex;
+    gap: 3rem;
+}
+
+
+
+.barra {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 3%;
+    display: none;
+}
+
+.logo {
+    margin-left: 3%;
+}
+.logo a{
+    color: #fff;
+    text-decoration: none;
+    background-image: url("");
+}
+
+
+/* Menu responsive */
+.down-menu {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: height .2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.down-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+}

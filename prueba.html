@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: flex-start; /* Alineación a la izquierda */
+            align-items: flex-start; /* Alineación arriba */
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .logo-container {
+            position: relative;
+            margin-left: 15px;
+            margin-top: 80px;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            animation: float 3s infinite alternate; /* Animación de flotación */
+        }
+
+        .logo.gamersfy {
+            margin-top: 40px;
+            margin-left: -44px;
+        }
+
+        .image-container {
+            position: absolute;
+            top: calc(100%);
+            left: calc(100% + 20px);
+            transform: translateY(-50%);
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .image {
+            width: 160px;
+            height: 250px;
+            background-size: cover;
+            animation: none;
+        }
+
+        .logo.open {
+            animation: bounce 0.5s forwards;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            filter: blur(2px);
+        }
+
+        .logo.open + .image-container {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-5px); }
+        }
+    </style>
+    <title>Efectos con Logo</title>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo" style="background-image: url('Imagenes/publicidad/instreamlylogo.png')"onclick="toggleImage(this)"></div>
+        <div class="image-container">
+            <div class="image" style="background-image: url('Imagenes/publicidad/INSTREAMLY.jpg'); margin-top:90px"></div>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <div class="logo gamersfy" style="background-image: url('Imagenes/publicidad/gamersfylogo.png')" onclick="toggleImage(this)"></div>
+        <div class="image-container">
+            <div class="image" style="background-image: url('Imagenes/publicidad/gamersfy.png'); margin-top:60px; margin-left: -15px;"></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleImage(logo) {
+            logo.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>

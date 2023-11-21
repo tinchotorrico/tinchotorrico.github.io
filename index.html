@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="temporizador.css">
     <link rel="stylesheet" href="comandos.css">
     <link rel="stylesheet" href="effectWordIndex.css">
+    <link rel="stylesheet" href="media_queries/android/dispositivo_movil.css">
+    <link rel="stylesheet" href="media_queries/android/pc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,7 +23,7 @@
 
         body {
             height: calc(2000px);
-            background-color: #e2b7b7;
+            background-image: linear-gradient(to bottom right, #031625, #590f72);
             position: relative;
             background-color: #000000;
             margin: 0;
@@ -70,8 +72,9 @@
             </div>
         </div>
      </div>
-     <div class="recuadro" style="margin-top: 50px; margin-left: 30px;">
+     <div class="recuadroA" style="margin-top: 50px; margin-left: 30px;">
         <h1 class="glow1">¡Comandos del canal!</h1>    
+        <img src="Imagenes/geometrydash1.png" class="comandoface1">
         <ul>
           <li><strong><a href="#">!sabias</a></strong> - ¡Arroja un dato al azar interesante!</li>
           <li><strong><a href="#">!wsp</a></strong> - Envia un enlace para unirse al grupo de wsp.</li>
@@ -83,8 +86,9 @@
         <button class="btn">¡Suscríbete!</button>
       </div>
 
-      <div class="recuadro" style="margin-top: 50px; margin-left: 900px;">
-        <h1 class="glow2">¡Comandos para subscriptores!</h1>    
+      <div class="recuadroB" style="margin-top: 50px; margin-left: 900px;">
+        <h1 class="glow2">¡Comandos para subscriptores!</h1>
+        <img src="Imagenes/geometrydash2.png" class="comandoface2">    
         <ul>
           <li><strong><a href="#">!sabias</a></strong> - ¡Arroja un dato al azar interesante!</li>
           <li><strong><a href="#">!wsp</a></strong> - Envia un enlace para unirse al grupo de wsp.</li>
@@ -95,21 +99,29 @@
         <p>Los comandos de esta lista son exclusivos y solo pueden ser utilizados en un directo por aquellos usuarios que tengan una sub activa en el <a href="https://www.twitch.tv/tinchotorrico">canal</a> y algunos tienen uso limitado por directo.</p>
         <button class="btn">¡Suscríbete!</button>
       </div>
-    <div>
-        <img src="Imagenes/geometrydash1.png" class="comandoface1">
-        <img src="Imagenes/geometrydash2.png" class="comandoface2">
-    </div>
+
     
     <div class="background4">
     </div>
 
     
+    <script>
+        // JavaScript para mostrar información sobre el dispositivo
+        function detectDevice() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            const deviceInfo = isMobile ? "Dispositivo móvil" : "PC";
+            
+            const deviceElement = document.createElement("p");
+            deviceElement.textContent = "Estás visitando desde un " + deviceInfo;
+            document.body.appendChild(deviceElement);
+        }
     
+        detectDevice();
+    </script>
     <script src="menudesplegable.js" defer></script>
     <script src="temporizador.js" defer></script>
     <script src="detectdevices.js" defer></script>
     <script src="effectWordIndex.js" defer></script>
-    <script type='text/javascript' src='//pl20329499.highcpmrevenuegate.com/72/7f/20/727f204b0b66f47a3ee5de5401fd4e59.js'></script>
 
 </body>
 </html>

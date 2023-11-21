@@ -1,0 +1,7 @@
+/* Estilos para PC */
+@media screen and (min-width: 769px) {
+    body {
+        background-color: blue;
+        color: white;
+    }
+}
